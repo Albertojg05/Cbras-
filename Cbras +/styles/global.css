@@ -6,6 +6,12 @@
     --gray-bg: #f8f8f8;
     --border-color: #dddddd;
     --gray-text: #888888;
+    --bg: #f9f9f9;
+    --bg-btn: #2e2e2e;
+    --bg-circle: #e2e2e7;
+    --delete-btn: #a94442;
+    --pay-btn: #3b4e8d;
+    --cart-btn: #5d7c3d;
 }
 
 * {
@@ -66,7 +72,7 @@
 }
 
 .sidebar nav a:hover {
-    background: #1a1a1a;
+    background: var(--sidebar-bg);
 }
 
 .footer {

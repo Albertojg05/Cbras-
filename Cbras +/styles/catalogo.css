@@ -1,0 +1,114 @@
+@import url(global.css);
+
+.main-content {
+    grid-area: content;
+    padding: 40px 60px;
+}
+
+.main-content h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.filter-container {
+    background-color: var(--gray-bg);
+    padding: 15px 25px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.filter-input {
+    padding: 8px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    outline: none;
+}
+
+.filter-radio-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.btn-filter {
+    background-color: var(--bg-btn);
+    color: var(--white);
+    padding: 8px 25px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #333;
+}
+
+.product-table th {
+    text-align: left;
+    padding: 15px;
+    border: 1px solid #333;
+    background-color: var(--white);
+}
+
+.product-table td {
+    padding: 20px 15px;
+    border: 1px solid #333;
+    vertical-align: middle;
+}
+
+.product-table a {
+    color: var(--text-main);
+    font-weight: bold;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.btn-add-cart {
+    background-color: var(--cart-btn);
+    color: var(--white);
+    padding: 0;
+    border: none;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.btn-review {
+    background-color: var(--pay-btn);
+    color: var(--white);
+    padding: 0;
+    border: none;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.btn-add-cart a, 
+.btn-review a {
+    display: inline-block;
+    width: 100%;
+    padding: 10px 15px;
+    color: var(--white);
+    text-decoration: none;
+}
+
+.btn-add-cart:hover, .btn-review:hover {
+    opacity: 0.9;
+}

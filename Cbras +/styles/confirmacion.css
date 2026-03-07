@@ -1,0 +1,74 @@
+@import url(global.css);
+
+.main-content {
+    grid-area: content;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-content h1 {
+    align-self: flex-start;
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.confirmation-card {
+    background-color: var(--white);
+    width: 100%;
+    max-width: 700px;
+    padding: 50px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+}
+
+.confirmation-card h2 {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+}
+
+.order-details {
+    background-color: var(--bg);
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.detail-row:last-child {
+    margin-bottom: 0;
+}
+
+.detail-label {
+    color: var(--text-main);
+}
+
+.detail-value {
+    font-weight: bold;
+}
+
+.btn-home {
+    background-color: var(--pay-btn);
+    color: var(--white);
+    padding: 12px 40px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    transition: opacity 0.3s;
+}
+
+.btn-home:hover {
+    opacity: 0.9;
+}

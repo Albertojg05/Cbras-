@@ -1,0 +1,86 @@
+@import url(global.css);
+
+.main-content {
+    grid-area: content;
+    padding: 40px 60px;
+}
+
+.main-content h1 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #333;
+    margin-bottom: 30px;
+}
+
+.cart-table th {
+    padding: 12px;
+    border: 1px solid #333;
+    background-color: var(--white);
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+.cart-table td {
+    padding: 15px;
+    border: 1px solid #333;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.cart-table .product-name {
+    text-align: left;
+    font-weight: bold;
+    padding-left: 20px;
+}
+
+.total-row td {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 20px;
+}
+
+.total-label {
+    text-align: right;
+    padding-right: 40px;
+}
+
+.btn-delete {
+    background-color: var(--delete-btn);
+    color: var(--white);
+    padding: 8px 25px;
+    border: none;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.btn-pay {
+    background-color: var(--pay-btn);
+    color: var(--white);
+    padding: 10px 45px;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.cart-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.back-link {
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: bold;
+    font-size: 1rem;
+}

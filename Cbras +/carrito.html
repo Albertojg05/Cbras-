@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cbras+ | Carrito de compras</title>
+    <link rel="stylesheet" href="styles/carrito.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <header class="top-header">
+            <div class="top-icons">
+                <a href="perfil.html" title="Perfil"><img
+                        src="https://www.pngall.com/wp-content/uploads/5/User-Profile-PNG-Free-Download.png"></a>
+                <a href="login.html" title="Cerrar Sesión"><img
+                        src="https://tse1.mm.bing.net/th/id/OIP.SvKmcbRgMDdRA9Hb2_YZigHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"></a>
+            </div>
+        </header>
+
+        <aside class="sidebar">
+            <nav>
+                <a href="index.html">Inicio</a>
+                <a href="catalogo.html">Catálogo de productos</a>
+                <a href="carrito.html">Carrito de compras</a>
+                <a href="pedidos.html">Gestión de pedidos</a>
+                <a href="admin.html">Administrador</a>
+                <a href="login.html">Iniciar sesión</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <h1>Tu carrito</h1>
+
+            <table class="cart-table">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio Unitario</th>
+                        <th>Cantidad</th>
+                        <th>Subtotal</th>
+                        <th></th> </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="product-name">Chaqueta clasic</td>
+                        <td>$ 449.99</td>
+                        <td>1</td>
+                        <td>$ 449.99</td>
+                        <td><button class="btn-delete">Eliminar</button></td>
+                    </tr>
+                    <tr>
+                        <td class="product-name">Playera loca</td>
+                        <td>$ 100.00</td>
+                        <td>2</td>
+                        <td>$ 200.00</td>
+                        <td><button class="btn-delete">Eliminar</button></td>
+                    </tr>
+                    <tr class="total-row">
+                        <td colspan="3" class="total-label">Total a pagar</td>
+                        <td colspan="2">$ 649.99</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="cart-footer">
+                <a href="catalogo.html" class="back-link">← Volver al catálogo</a>
+                <a href="compra.html" class="btn-pay">Pagar</a>
+            </div>
+        </main>
+
+        <footer class="footer">
+            Aplicaciones Web – Unidad 2
+        </footer>
+    </div>
+
+</body>
+
+</html>
