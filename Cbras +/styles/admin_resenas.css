@@ -24,8 +24,8 @@
     vertical-align: middle;
 }
 
-.btn-delete {
-    background-color: var(--delete-btn);
+.btn-action {
+    background-color: var(--pay-btn);
     color: var(--white);
     text-decoration: none;
     padding: 8px 18px;

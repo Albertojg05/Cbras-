@@ -47,25 +47,15 @@
                         <td>Joel Rubén</td>
                         <td>Cliente</td>
                         <td>joel@cbrasplus.com</td>
-                        <td>
-                            <div class="status-cell">
-                                <span class="badge inactive" id="estado-usuario-2">Inactivo</span>
-                                <button type="button" class="btn-status" onclick="toggleUserStatus('estado-usuario-2')">Cambiar estado</button>
-                            </div>
-                        </td>
-                        <td><a href="#" class="btn-delete">Eliminar</a></td>
+                        <td><span class="badge active">Activo</span></td>
+                        <td><a href="#" class="btn-action">Editar</a></td>
                     </tr>
                     <tr>
                         <td>Alberto Jiménez</td>
                         <td>Administrador</td>
                         <td>alberto@cbrasplus.com</td>
-                        <td>
-                            <div class="status-cell">
-                                <span class="badge active" id="estado-usuario-1">Activo</span>
-                                <button type="button" class="btn-status" onclick="toggleUserStatus('estado-usuario-1')">Cambiar estado</button>
-                            </div>
-                        </td>
-                        <td><a href="#" class="btn-delete">Eliminar</a></td>
+                        <td><span class="badge active">Activo</span></td>
+                        <td><a href="#" class="btn-action">Editar</a></td>
                     </tr>
                 </tbody>
             </table>
@@ -73,15 +63,6 @@
 
         <footer class="footer">Aplicaciones Web – Unidad 2</footer>
     </div>
-    <script>
-        function toggleUserStatus(id) {
-            const badge = document.getElementById(id);
-            const isActive = badge.textContent.trim() === 'Activo';
-            badge.textContent = isActive ? 'Inactivo' : 'Activo';
-            badge.classList.toggle('active', !isActive);
-            badge.classList.toggle('inactive', isActive);
-        }
-    </script>
 </body>
 
 </html>
