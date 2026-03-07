@@ -58,7 +58,7 @@
 }
 
 .btn-save,
-.btn-delete {
+.btn-back {
     padding: 11px 22px;
     border-radius: 18px;
     text-decoration: none;
@@ -72,12 +72,7 @@
     color: var(--white);
 }
 
-.btn-delete {
-    background-color: var(--delete-btn);
-    color: var(--white);
-}
-
-.btn-delete {
+.btn-back {
     background-color: var(--delete-btn);
     color: var(--white);
 }

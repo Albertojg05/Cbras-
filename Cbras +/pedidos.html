@@ -47,7 +47,12 @@
                         <td class="order-number">#ORD-663905</td>
                         <td>06/03/2026</td>
                         <td>$ 649.99</td>
-                        <td>Enviado</td>
+                        <td>
+                            <div class="status-wrapper">
+                                <span class="order-status-text" id="estado-pedido-1">Enviado</span>
+                                <button type="button" class="btn-status-order" onclick="cycleOrderStatus('estado-pedido-1')">Cambiar estado</button>
+                            </div>
+                        </td>
                         <td style="text-align: center;">
                             <a href="detalles_pedido.html" class="btn-details">Ver detalles</a>
                         </td>
@@ -75,6 +80,15 @@
         </footer>
     </div>
 
+    <script>
+        function cycleOrderStatus(id) {
+            const estados = ['Pendiente', 'Enviado', 'Entregado'];
+            const label = document.getElementById(id);
+            const actual = label.textContent.trim();
+            const index = estados.indexOf(actual);
+            label.textContent = estados[(index + 1) % estados.length];
+        }
+    </script>
 </body>
 
 </html>

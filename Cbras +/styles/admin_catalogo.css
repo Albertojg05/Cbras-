@@ -43,33 +43,22 @@
     gap: 8px;
 }
 
-.badge {
-    display: inline-block;
-    padding: 6px 14px;
-    border-radius: 14px;
-    font-size: 0.85rem;
-    font-weight: bold;
-}
-
-.active {
-    background-color: #d8f0d2;
-    color: #2d6b21;
-}
-
 .btn-green,
-.btn-blue {
+.btn-delete {
+    display: inline-block;
     color: var(--white);
     text-decoration: none;
     padding: 8px 16px;
     border-radius: 16px;
     font-size: 0.85rem;
     font-weight: bold;
+    border: none;
 }
 
 .btn-green {
     background-color: var(--cart-btn);
 }
 
-.btn-blue {
-    background-color: var(--pay-btn);
+.btn-delete {
+    background-color: var(--delete-btn);
 }
