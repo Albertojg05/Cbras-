@@ -1,0 +1,75 @@
+@import url(global.css);
+
+.main-content {
+    grid-area: content;
+    padding: 40px 60px;
+}
+
+.title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.title-row h1 {
+    font-size: 2rem;
+}
+
+.btn-primary {
+    background-color: var(--bg-btn);
+    color: var(--white);
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 18px;
+    font-weight: bold;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #333;
+}
+
+.data-table th,
+.data-table td {
+    border: 1px solid #333;
+    padding: 16px 14px;
+    text-align: left;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 14px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.active {
+    background-color: #d8f0d2;
+    color: #2d6b21;
+}
+
+.btn-green,
+.btn-blue {
+    color: var(--white);
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 16px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.btn-green {
+    background-color: var(--cart-btn);
+}
+
+.btn-blue {
+    background-color: var(--pay-btn);
+}

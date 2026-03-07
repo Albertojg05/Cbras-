@@ -1,0 +1,35 @@
+@import url(global.css);
+
+.main-content {
+    grid-area: content;
+    padding: 40px 60px;
+}
+
+.main-content h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #333;
+}
+
+.data-table th,
+.data-table td {
+    border: 1px solid #333;
+    padding: 16px 14px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.btn-action {
+    background-color: var(--pay-btn);
+    color: var(--white);
+    text-decoration: none;
+    padding: 8px 18px;
+    border-radius: 16px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}

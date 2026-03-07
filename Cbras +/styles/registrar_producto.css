@@ -1,0 +1,78 @@
+@import url(global.css);
+
+.main-content {
+    grid-area: content;
+    padding: 40px 60px;
+}
+
+.main-content h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.form-card {
+    max-width: 620px;
+    background-color: var(--bg);
+    border-radius: 18px;
+    padding: 30px;
+}
+
+.form-group,
+.form-group-row {
+    margin-bottom: 20px;
+}
+
+.form-group-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 11px 14px;
+    font-size: 1rem;
+    outline: none;
+    background-color: var(--white);
+}
+
+.form-textarea {
+    min-height: 140px;
+    resize: none;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.btn-save,
+.btn-cancel {
+    padding: 11px 22px;
+    border-radius: 18px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-save {
+    background-color: var(--bg-btn);
+    color: var(--white);
+}
+
+.btn-cancel {
+    background-color: var(--delete-btn);
+    color: var(--white);
+}

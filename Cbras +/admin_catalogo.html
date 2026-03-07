@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cbras+ | Administrar Catálogo</title>
+    <link rel="stylesheet" href="styles/admin_catalogo.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="top-header">
+            <div class="top-icons">
+                <a href="perfil.html" title="Perfil"><img src="https://www.pngall.com/wp-content/uploads/5/User-Profile-PNG-Free-Download.png" alt="Perfil"></a>
+                <a href="login.html" title="Cerrar Sesión"><img src="https://tse1.mm.bing.net/th/id/OIP.SvKmcbRgMDdRA9Hb2_YZigHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Salir"></a>
+            </div>
+        </header>
+
+        <aside class="sidebar">
+            <nav>
+                <a href="index.html">Inicio</a>
+                <a href="catalogo.html">Catálogo de productos</a>
+                <a href="carrito.html">Carrito</a>
+                <a href="pedidos.html">Gestión de pedidos</a>
+                <a href="admin.html">Administrador</a>
+                <a href="login.html">Iniciar sesión</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="title-row">
+                <h1>Administrar Catálogo</h1>
+                <a href="registrar_producto.html" class="btn-primary">Registrar producto</a>
+            </div>
+
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th>Stock disponible</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Chaqueta clasic</td>
+                        <td>$ 449.99</td>
+                        <td>15 piezas</td>
+                        <td><span class="badge active">Disponible</span></td>
+                        <td>
+                            <div class="action-buttons">
+                                <a href="actualizar_producto.html" class="btn-green">Editar</a>
+                                <a href="#" class="btn-blue">Ver</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Playera loca</td>
+                        <td>$ 100.00</td>
+                        <td>24 piezas</td>
+                        <td><span class="badge active">Disponible</span></td>
+                        <td>
+                            <div class="action-buttons">
+                                <a href="actualizar_producto.html" class="btn-green">Editar</a>
+                                <a href="detalles.html" class="btn-blue">Ver</a>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+
+        <footer class="footer">Aplicaciones Web – Unidad 2</footer>
+    </div>
+</body>
+
+</html>
