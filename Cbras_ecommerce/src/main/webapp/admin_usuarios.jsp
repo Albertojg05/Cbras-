@@ -30,6 +30,20 @@
                     <h1>Administrar Usuarios</h1>
                 </div>
 
+                <div class="search-container">
+                    <form action="admin_usuarios.jsp" method="GET" class="search-form">
+                        <input type="text" name="q" placeholder="Buscar usuario por nombre..." 
+                               class="search-input"
+                               value="<%= request.getParameter("q") != null ? request.getParameter("q") : ""%>">
+
+                        <button type="submit" class="search-btn">Buscar</button>
+
+                        <% if (request.getParameter("q") != null && !request.getParameter("q").isEmpty()) { %>
+                        <a href="admin_usuarios.jsp" class="clear-btn">Limpiar</a>
+                        <% } %>
+                    </form>
+                </div>
+
                 <% if ("estado_actualizado".equals(request.getParameter("mensaje"))) { %>
                 <p style="color: #4CAF50; font-weight: bold; text-align: center;">El estado del usuario se actualizó correctamente.</p>
                 <% } else if ("eliminado".equals(request.getParameter("mensaje"))) { %>
@@ -49,7 +63,15 @@
                     <tbody>
                         <%
                             UsuarioDAO dao = new UsuarioDAO();
-                            List<Usuario> listaUsuarios = dao.listarTodos();
+                            List<Usuario> listaUsuarios;
+
+                            String busqueda = request.getParameter("q");
+
+                            if (busqueda != null && !busqueda.trim().isEmpty()) {
+                                listaUsuarios = dao.buscarPorNombre(busqueda.trim());
+                            } else {
+                                listaUsuarios = dao.listarTodos();
+                            }
 
                             if (listaUsuarios != null && !listaUsuarios.isEmpty()) {
                                 for (Usuario u : listaUsuarios) {

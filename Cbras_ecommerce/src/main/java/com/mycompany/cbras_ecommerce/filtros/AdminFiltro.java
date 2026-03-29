@@ -23,7 +23,7 @@ import jakarta.servlet.http.HttpSession;
  *
  * @author Alberto Jimenez
  */
-@WebFilter(urlPatterns = {"/admin.jsp", "/admin_catalogo.jsp", "/admin_resenas.jsp", "/registrar_producto.jsp"})
+@WebFilter(urlPatterns = {"/admin.jsp", "/admin_catalogo.jsp", "/admin_resenas.jsp", "/registrar_producto.jsp", "/pedidos.jsp"})
 public class AdminFiltro implements Filter {
 
     private static final boolean debug = true;

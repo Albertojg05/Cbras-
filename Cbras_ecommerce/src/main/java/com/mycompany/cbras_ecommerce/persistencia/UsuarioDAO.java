@@ -60,6 +60,31 @@ public class UsuarioDAO {
         return lista;
     }
 
+    public List<Usuario> buscarPorNombre(String busqueda) {
+        List<Usuario> lista = new ArrayList<>();
+        String sql = "SELECT * FROM usuarios WHERE nombre LIKE ?";
+
+        try (Connection con = ConexionBD.obtenerConexion(); PreparedStatement ps = con.prepareStatement(sql)) {
+
+            ps.setString(1, "%" + busqueda + "%");
+
+            try (ResultSet rs = ps.executeQuery()) {
+                while (rs.next()) {
+                    Usuario u = new Usuario();
+                    u.setId(rs.getInt("id_usuario"));
+                    u.setNombre(rs.getString("nombre"));
+                    u.setCorreo(rs.getString("correo"));
+                    u.setRol(rs.getString("rol"));
+                    u.setEstado(rs.getString("estado") != null ? rs.getString("estado") : "Activo");
+                    lista.add(u);
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return lista;
+    }
+
     public boolean eliminar(int id) {
         String sql = "DELETE FROM usuarios WHERE id_usuario = ?";
         try (Connection con = ConexionBD.obtenerConexion(); PreparedStatement ps = con.prepareStatement(sql)) {

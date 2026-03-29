@@ -29,8 +29,8 @@
                 <div class="admin-actions">
                     <a class="admin-btn" href="admin_usuarios.jsp">Usuarios</a>
                     <a class="admin-btn" href="admin_catalogo.jsp">Catálogo</a>
-                    <a class="admin-btn" href="admin_resenas.html">Reseñas</a>
-                    <a class="admin-btn" href="pedidos.html">Pedidos</a>
+                    <a class="admin-btn" href="admin_resenas.jsp">Reseñas</a>
+                    <a class="admin-btn" href="pedidos.jsp">Pedidos</a>
                 </div>
             </main>
 

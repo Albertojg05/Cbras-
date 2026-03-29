@@ -64,6 +64,50 @@ public class ProductoDAO {
         return null;
     }
 
+    public List<Producto> buscarPorFiltros(String nombre, String precioStr) {
+        List<Producto> lista = new ArrayList<>();
+
+        StringBuilder sql = new StringBuilder("SELECT * FROM productos WHERE 1=1");
+
+        boolean filtrarNombre = nombre != null && !nombre.trim().isEmpty();
+        boolean filtrarPrecio = precioStr != null && !precioStr.trim().isEmpty();
+
+        if (filtrarNombre) {
+            sql.append(" AND nombre LIKE ?");
+        }
+        if (filtrarPrecio) {
+            sql.append(" AND precio <= ?");
+        }
+
+        try (Connection con = ConexionBD.obtenerConexion(); PreparedStatement ps = con.prepareStatement(sql.toString())) {
+
+            int paramIndex = 1;
+
+            if (filtrarNombre) {
+                ps.setString(paramIndex++, "%" + nombre.trim() + "%");
+            }
+            if (filtrarPrecio) {
+                ps.setDouble(paramIndex++, Double.parseDouble(precioStr.trim()));
+            }
+
+            try (ResultSet rs = ps.executeQuery()) {
+                while (rs.next()) {
+                    Producto p = new Producto();
+                    p.setIdProducto(rs.getInt("id_producto"));
+                    p.setNombre(rs.getString("nombre"));
+                    p.setDescripcion(rs.getString("descripcion"));
+                    p.setPrecio(rs.getDouble("precio"));
+                    p.setStock(rs.getInt("stock"));
+                    p.setUrlImagen(rs.getString("url_imagen"));
+                    lista.add(p);
+                }
+            }
+        } catch (SQLException | NumberFormatException e) {
+            e.printStackTrace();
+        }
+        return lista;
+    }
+
     public boolean agregar(Producto producto) {
         String sql = "INSERT INTO productos (nombre, descripcion, precio, stock, url_imagen) VALUES (?, ?, ?, ?, ?)";
         try (Connection con = ConexionBD.obtenerConexion(); PreparedStatement ps = con.prepareStatement(sql)) {
@@ -82,7 +126,7 @@ public class ProductoDAO {
             return false;
         }
     }
-    
+
     public boolean eliminar(int idProducto) {
         String sql = "DELETE FROM productos WHERE id_producto = ?";
         try (Connection con = ConexionBD.obtenerConexion(); PreparedStatement ps = con.prepareStatement(sql)) {
