@@ -1,0 +1,9 @@
+<%-- any content can be specified here e.g.: --%>
+<div class="top-icons">
+    <a href="perfil.html" title="Perfil"><img
+            src="https://www.pngall.com/wp-content/uploads/5/User-Profile-PNG-Free-Download.png"></a>
+    <a href="login.html" title="Cerrar Sesión"><img
+            src="https://tse1.mm.bing.net/th/id/OIP.SvKmcbRgMDdRA9Hb2_YZigHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"></a>
+</div>
+<hr>
+
